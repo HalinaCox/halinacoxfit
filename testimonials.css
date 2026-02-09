@@ -1,4 +1,16 @@
-/* ===== Testimonials Page ===== */
+/* ===== TESTIMONIALS PAGE - testimonials.css ===== */
+/* Header/footer styles are now in styles.css */
+
+/* Define CSS variables for this page */
+:root {
+  --bg-dark: #0a0600;
+  --text-muted: rgb(171, 163, 152);
+}
+
+/* ===== Page Content ===== */
+.content {
+  padding: 60px 20px;
+}
 
 .testimonials-header {
   text-align: center;
