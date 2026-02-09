@@ -1,0 +1,114 @@
+.work-contact {
+  padding: 72px 20px;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(209, 183, 154, 0.35), transparent 35%),
+    radial-gradient(circle at 90% 90%, rgba(10, 6, 0, 0.08), transparent 30%),
+    #f9f7f4;
+}
+
+.work-contact-card {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 34px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(10, 6, 0, 0.08);
+  box-shadow: 0 20px 50px rgba(10, 6, 0, 0.12);
+  backdrop-filter: blur(4px);
+}
+
+.work-contact-title {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  letter-spacing: 1px;
+  color: #0a0600;
+  padding-left: 10px;
+}
+
+.work-contact-subtitle {
+  margin: 10px 0 28px;
+  color: #3a342d;
+  line-height: 1.5;
+  padding-left: 10px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 18px;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field label {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #1f1913;
+  padding-left: 10px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: 1px solid #cfc7bd;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font: inherit;
+  background: #fff;
+  color: #0a0600;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: #0a0600;
+  box-shadow: 0 0 0 4px rgba(10, 6, 0, 0.08);
+}
+
+.contact-submit {
+  justify-self: start;
+  border: 2px solid #0a0600;
+  border-radius: 999px;
+  background: #fff;
+  color: #0a0600;
+  padding: 12px 24px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.contact-submit:hover {
+  background: #0a0600;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .work-contact-card {
+    padding: 24px 18px;
+  }
+
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-submit {
+    width: 100%;
+    justify-self: stretch;
+  }
+}
