@@ -10,6 +10,16 @@
 /* ===== Page Content ===== */
 .content {
   padding: 60px 20px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .testimonials-header {

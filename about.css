@@ -4,17 +4,22 @@
 /* ===== Content ===== */
 .content {
   padding: 60px 20px;
+  min-height: calc(100vh - 80px - 80px); /* viewport height minus header and footer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-inline {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  gap: 80px;
-  max-width: 1200px;
+  gap: 40px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
+/* Animation for image - slides up from bottom */
 .about-img {
   width: 400px;
   height: 400px;
@@ -23,14 +28,51 @@
   object-fit: cover;
   object-position: center 43%;
   flex-shrink: 0;
+  
+  /* Animation */
+  animation: slideUpFade 0.8s ease-out;
 }
 
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for text - slides down from top */
 .about-text {
   flex: 1;
-  max-width: 780px;
+  max-width: 680px; /* Reduced from 780px to prevent orphaned words */
   margin: 0 auto;
   text-align: center;
   padding: 30px 20px 32px;
+  
+  /* Animation */
+  animation: slideDownFade 0.8s ease-out;
+}
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-title {
+  font-size: 2.5rem;
+  margin: 0 0 24px;
+  color: #0a0600;
+  letter-spacing: 2px;
+  font-weight: 600;
 }
 
 .about-text p {
@@ -38,6 +80,8 @@
   line-height: 1.6;
   font-family: "Times New Roman", Times, serif;
   font-size: 1rem;
+  text-align: justify;
+  text-align-last: left;
 }
 
 .about-text p + p {
