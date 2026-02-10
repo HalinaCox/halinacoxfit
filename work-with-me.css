@@ -1,9 +1,5 @@
 .work-contact {
   padding: 72px 20px;
-  background:
-    radial-gradient(circle at 12% 10%, rgba(209, 183, 154, 0.35), transparent 35%),
-    radial-gradient(circle at 90% 90%, rgba(10, 6, 0, 0.08), transparent 30%),
-    #f9f7f4;
 }
 
 .work-contact-card {
@@ -15,6 +11,20 @@
   border: 1px solid rgba(10, 6, 0, 0.08);
   box-shadow: 0 20px 50px rgba(10, 6, 0, 0.12);
   backdrop-filter: blur(4px);
+  
+  /* Slide in from right animation - more dramatic */
+  animation: slideInRight 1s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .work-contact-title {

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Halina Cox</title>
+    
+    <!-- Global styles for header/footer -->
+    <link rel="stylesheet" href="styles.css" />
+    
+    <!-- Page-specific styles -->
+    <link rel="stylesheet" href="services.css" />
+  </head>
+  <body class="marble-bg">
+    <!-- Include header -->
+    <div id="header-placeholder"></div>
+
+    <main>
+      <section class="services-content">
+        <div class="services-header">
+          <h1 class="services-title">Services</h1>
+          <p class="services-subtitle">
+            I offer three core services: website development for small businesses, event strategy for tech companies, and operational consulting for growing teams.
+          </p>
+        </div>
+
+        <!-- Service Cards -->
+        <div class="services-grid">
+          
+          <!-- Website Development -->
+          <div class="service-card">
+            <h2 class="service-title">Website Development</h2>
+            <p class="service-description">
+              Clean, functional websites for small businesses, personal brands, and MVPs. I build sites that get you online quickly—without enterprise complexity or enterprise prices.
+            </p>
+            <div class="service-details">
+              <h3>What I Build:</h3>
+              <ul>
+                <li>Small business websites (5-10 pages)</li>
+                <li>Portfolio & personal brand sites</li>
+                <li>Landing pages for campaigns or products</li>
+                <li>Website maintenance & updates</li>
+              </ul>
+              <h3>Who It's For:</h3>
+              <p>Small businesses, consultants, entrepreneurs, and anyone who needs a professional online presence.</p>
+              <h3>Investment:</h3>
+              <p>$1,000 - $5,000 per project</p>
+            </div>
+            <a href="./work-with-me.html?service=website" class="service-cta">Start Your Website Project</a>
+          </div>
+
+          <!-- Event Planning & Strategy -->
+          <div class="service-card featured">
+            <div class="featured-badge">Most Requested</div>
+            <h2 class="service-title">Event & Program Strategy</h2>
+            <p class="service-description">
+              High-impact offsites, leadership retreats, and global events for tech companies. With 80+ events and experience as a software engineer, I understand how technical teams actually collaborate.
+            </p>
+            <div class="service-details">
+              <h3>What I Plan:</h3>
+              <ul>
+                <li>Global offsites & team retreats</li>
+                <li>Leadership summits & executive meetings</li>
+                <li>Conference & company event strategy</li>
+                <li>Vendor sourcing & budget management</li>
+              </ul>
+              <h3>Who It's For:</h3>
+              <p>Tech companies, distributed teams, engineering organizations, and growing startups.</p>
+              <h3>Investment:</h3>
+              <p>$5,000 - $50,000+ per event</p>
+            </div>
+            <a href="./work-with-me.html?service=event" class="service-cta">Plan Your Next Event</a>
+          </div>
+
+          <!-- Operational Consulting -->
+          <div class="service-card">
+            <h2 class="service-title">Operational Consulting</h2>
+            <p class="service-description">
+              Scalable operational systems, playbooks, and processes for growing teams. I build frameworks that help companies scale without adding bureaucracy.
+            </p>
+            <div class="service-details">
+              <h3>What I Build:</h3>
+              <ul>
+                <li>Onboarding programs & playbooks</li>
+                <li>Process documentation & standardization</li>
+                <li>Operational frameworks for scaling teams</li>
+                <li>Workshop facilitation & training</li>
+              </ul>
+              <h3>Who It's For:</h3>
+              <p>Startups with 20-100 employees, companies scaling rapidly, teams transitioning from chaos to structure.</p>
+              <h3>Investment:</h3>
+              <p>$5,000 - $20,000 per engagement</p>
+            </div>
+            <a href="./work-with-me.html?service=consulting" class="service-cta">Build Better Systems</a>
+          </div>
+
+          <!-- Career Transition Coaching -->
+          <div class="service-card secondary">
+            <h2 class="service-title">Career Transition Coaching</h2>
+            <p class="service-description">
+              Strategic guidance for professionals making non-traditional career pivots into tech. I went from event planning to software engineering—I can help you navigate your transition.
+            </p>
+            <div class="service-details">
+              <h3>What I Offer:</h3>
+              <ul>
+                <li>Career pivot strategy & planning</li>
+                <li>Resume & narrative positioning</li>
+                <li>Bootcamp selection & preparation</li>
+                <li>1-on-1 coaching & accountability</li>
+              </ul>
+              <h3>Who It's For:</h3>
+              <p>Career changers considering bootcamps, professionals pivoting from operations/PM into engineering.</p>
+              <h3>Investment:</h3>
+              <p>$500 - $3,000 per package</p>
+            </div>
+            <a href="./work-with-me.html?service=career" class="service-cta">Start Your Pivot</a>
+          </div>
+
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="services-bottom-cta">
+          <h2>Not sure which service fits your needs?</h2>
+          <p>Let's talk. I'm happy to help you figure out the best approach for your project.</p>
+          <a href="./work-with-me.html?service=other" class="bottom-cta-button">Get In Touch</a>
+        </div>
+
+      </section>
+    </main>
+
+    <!-- Include footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript to load header and footer -->
+    <script>
+      // Load header
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+        });
+
+      // Load footer
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

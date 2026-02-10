@@ -29,6 +29,14 @@ main {
   flex: 1;
 }
 
+/* Marble background for select pages */
+.marble-bg main {
+  background-image: url('images/marble.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 /* ===== Header ===== */
 .site-header {
   background-color: var(--bg-dark);
@@ -37,6 +45,7 @@ main {
   align-items: center;
   padding: 30px 32px;
   letter-spacing: 3px;
+  position: relative;
 }
 
 .site-name {
@@ -44,10 +53,48 @@ main {
   color: var(--text-light);
   font-size: 25px;
   cursor: pointer;
+  z-index: 1001;
 }
 
 .site-name:hover {
   opacity: 0.9;
+}
+
+/* Hamburger menu button (hidden on desktop) */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 2px;
+  background-color: var(--text-light);
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Navigation wrapper */
+.nav-wrapper {
+  display: block;
 }
 
 /* Navigation */
@@ -134,12 +181,55 @@ main {
     letter-spacing: 2px;
   }
 
-  .nav-menu {
-    gap: 16px;
-    font-size: 11px;
-  }
-
   .site-name {
     font-size: 20px;
+  }
+
+  /* Show hamburger menu on mobile */
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  /* Mobile navigation */
+  .nav-wrapper {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--bg-dark);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding-top: 80px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-wrapper.active {
+    right: 0;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 0;
+    align-items: stretch;
+    padding: 0;
+  }
+
+  .nav-menu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-menu a {
+    display: block;
+    padding: 18px 24px;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+  }
+
+  .nav-cta {
+    margin: 16px 24px;
+    text-align: center;
+    display: block;
   }
 }
