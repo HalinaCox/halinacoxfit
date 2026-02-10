@@ -4,17 +4,11 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Halina Cox</title>
-    
-    <!-- Global styles for header/footer -->
     <link rel="stylesheet" href="styles.css"/>
-    
-    <!-- Page-specific styles -->
     <link rel="stylesheet" href="index.css"/>
   </head>
   <body>
-    <!-- Include header -->
     <div id="header-placeholder"></div>
-
     <main>
       <section class="hero">
         <img
@@ -37,20 +31,13 @@
         <a href="./about.html" class="about-cta">MORE ABOUT ME</a>
       </div>
     </main>
-
-    <!-- Include footer -->
     <div id="footer-placeholder"></div>
-
-    <!-- JavaScript to load header and footer -->
     <script>
-      // Load header
       fetch('header.html')
         .then(response => response.text())
         .then(data => {
           document.getElementById('header-placeholder').innerHTML = data;
         });
-
-      // Load footer
       fetch('footer.html')
         .then(response => response.text())
         .then(data => {
