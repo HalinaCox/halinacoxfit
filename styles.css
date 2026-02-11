@@ -185,7 +185,7 @@ main {
 }
 
 /* ===== Mobile Responsive ===== */
-@media (max-width: 768px) {
+@media (max-width: 980px) {
   .site-header {
     padding: 20px 18px;
     letter-spacing: 2px;
