@@ -56,41 +56,16 @@
 /* Service Cards */
 .service-card {
   background: white;
-  border: 2px solid rgba(10, 6, 0, 0.1);
+  border: 2px solid var(--bg-dark);
   border-radius: 16px;
   padding: 32px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   position: relative;
 }
 
 .service-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(10, 6, 0, 0.12);
-  border-color: var(--bg-dark);
-}
-
-/* Featured Card */
-.service-card.featured {
-  border: 2px solid var(--bg-dark);
-  background: linear-gradient(135deg, #ffffff 0%, #f9f7f4 100%);
-}
-
-.featured-badge {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background: var(--bg-dark);
-  color: white;
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  letter-spacing: 1px;
-  font-weight: 700;
-}
-
-/* Secondary Card (Career Coaching) */
-.service-card.secondary {
-  border-color: rgba(10, 6, 0, 0.15);
 }
 
 /* Service Card Content */
