@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Halina Cox</title>
-    <style>
-      body {
-        margin: 0;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #0a0600;
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
-        letter-spacing: 2px;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="index.css"/>
   </head>
   <body>
-    <div>
-      <h1>Halina Cox</h1>
-      <p>Website coming soon.</p>
-    </div>
+    <div id="header-placeholder"></div>
+    <main>
+      <section class="hero">
+         <div class="hero-frame">
+          <img
+            class="hero-img"
+            src="images/about-img.jpg"
+            alt="Halina Cox headshot"
+          />
+        </div>
+      </section>
+      <section class="content">
+        <div class="me">
+          <p>
+            Hi! I'm Halina—a software engineer and consultant helping <strong> small businesses build their online presence 
+          </strong> and <strong> tech companies design better events and operations</strong>. With a background 
+          as a full-stack engineer at Cisco Meraki and 100+ high-stakes events under my belt, I bring both technical 
+          expertise and operational rigor to every project.
+          </p>
+        </div>
+      </section>
+      <div class="bottom-cta">
+        <a href="./about.html" class="about-cta">MORE ABOUT ME</a>
+      </div>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+        });
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
   </body>
 </html>
