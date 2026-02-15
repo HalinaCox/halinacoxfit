@@ -2,36 +2,38 @@
 
 html, body {
   height: 100%;
+  overscroll-behavior: none;
 }
 
 body {
   margin: 0;
   background-color: white; 
   font-family: Arial, Helvetica, sans-serif;
-  min-height: 100vh;
-
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 main {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
 }
 
-/* ====== Hero (dark area under header) ====== */
+/* ====== Hero (dark area with image) ====== */
 .hero {
   background-color: #0a0600;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -1px;
-  padding: 0;
+  padding: 0; /* No padding - image fills the black space evenly */
+  flex-shrink: 0; /* Don't shrink */
 }
 
 .hero-frame {
   width: min(900px, 55vw);
-  aspect-ratio: 1 / 1; 
-  height: clamp(400px, 50vw, 650px);
+  height: clamp(400px, 50vh, 700px); /* Much larger - takes up half the viewport */
   overflow: hidden;
 }
 
@@ -39,9 +41,9 @@ main {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
-  object-position: center 30%;
-  animation: fadeIn 1.2s ease-out;
+  object-fit: contain; /* Show entire image, no cropping */
+  object-position: center center; /* Center the image */
+  animation: fadeIn .2s ease-out;
 }
 
 @keyframes fadeIn {
@@ -55,15 +57,20 @@ main {
 
 /* ====== White content area ====== */
 .content {
-  padding: 20px 20px 20px;
+  background-color: white;
+  padding: clamp(15px, 2vh, 25px) 20px 0;
+  flex: 0 1 auto; /* Fill remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 /* Me card */
 .me {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   text-align: center;
-  padding: 30px 40px 32px;
+  padding: clamp(25px, 2vh, 30px) clamp(60px, 4vw, 40px);
   border-radius: 60px;
 }
 
@@ -71,18 +78,20 @@ main {
   margin: 0;
   line-height: 1.6;
   font-family: 'Times', sans-serif;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1.8vh, 1.2rem);
 }
 
 .me p + p {
-  margin-top: 20px;
+  margin-top: clamp(15px, 2vh, 20px);
 }
 
 /* container to center the button */
 .bottom-cta {
+  background-color: white;
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  padding: 10px 0 clamp(10px, 1.5vh, 20px) 0;
+  flex-shrink: 0;
 }
 
 /* button itself */
@@ -104,15 +113,41 @@ main {
   color: white;
 }
 
-/* ====== Optional: nicer behavior on small screens ====== */
+/* ====== Responsive adjustments ====== */
 @media (max-width: 980px) {
   .hero-frame {
-    display: none;
+    width: 85vw;
+    height: clamp(350px, 45vh, 600px);
   }
+}
 
-  .hero {
-    background-color: #0a0600;
-    min-height: 90px;  /* gives a clean black band under the header */
-    padding-top: 0;    /* optional: keeps it tight */
+/* For 15-inch MacBook and similar viewport heights (around 900px) */
+@media (max-height: 900px) {
+  .hero-frame {
+    height: clamp(350px, 45vh, 600px);
+  }
+  
+  .me p {
+    font-size: clamp(0.95rem, 1.6vh, 1.15rem);
+  }
+}
+
+/* For smaller laptops */
+@media (max-height: 768px) {
+  .hero-frame {
+    height: clamp(280px, 40vh, 500px);
+  }
+  
+  .me {
+    padding: clamp(15px, 2.5vh, 30px) clamp(25px, 3vw, 35px);
+  }
+  
+  .me p {
+    font-size: clamp(0.9rem, 1.5vh, 1.1rem);
+    line-height: 1.5;
+  }
+  
+  .content {
+    padding: clamp(15px, 2.5vh, 30px) 20px clamp(10px, 1.5vh, 20px);
   }
 }

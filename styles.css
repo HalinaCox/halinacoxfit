@@ -23,12 +23,15 @@ body {
   flex-direction: column;
   background: white;
   font-family: Arial, Helvetica, sans-serif;
-  padding-top: 90px; /* Space for fixed header */
-  padding-bottom: 80px; /* Space for fixed footer */
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 main {
   flex: 1;
+  margin-top: 90px; /* Push content below fixed header */
+  margin-bottom: 0; /* No bottom margin needed */
+  padding-bottom: 80px; /* Space for fixed footer */
 }
 
 /* Marble background for select pages */
@@ -52,6 +55,8 @@ main {
   left: 0;
   right: 0;
   z-index: 1000;
+  height: 90px; /* Define explicit height */
+  box-sizing: border-box;
 }
 
 .site-name {
@@ -149,12 +154,16 @@ main {
 /* ===== Footer ===== */
 .site-footer {
   background-color: var(--bg-dark);
-  padding: 28px 0;
+  padding: 0;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 1000;
+  height: 80px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
 }
 
 .footer-inner {
@@ -189,6 +198,11 @@ main {
   .site-header {
     padding: 20px 18px;
     letter-spacing: 2px;
+    height: 70px; /* Smaller on mobile */
+  }
+
+  main {
+    margin-top: 70px; /* Match mobile header height */
   }
 
   .site-name {
@@ -201,29 +215,28 @@ main {
   }
 
   /* Mobile navigation */
-    .nav-wrapper {
-      position: fixed;
-      top: 90px; /* matches your header height */
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: auto;
-      background-color: var(--bg-dark);
-      padding: 20px 0;
-      display: none;
-    }
+  .nav-wrapper {
+    position: fixed;
+    top: 70px; /* matches mobile header height */
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    background-color: var(--bg-dark);
+    padding: 20px 0;
+    display: none;
+  }
 
-    .nav-wrapper.active {
-      display: block;
-    }
+  .nav-wrapper.active {
+    display: block;
+  }
 
   .nav-menu {
-  flex-direction: column;
-  gap: 0;
-  align-items: center;
-  padding: 0;
-}
-
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+    padding: 0;
+  }
 
   .nav-menu li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
