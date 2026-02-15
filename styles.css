@@ -199,7 +199,7 @@ main {
     padding: 20px 18px;
     letter-spacing: 2px;
     height: 70px; /* Smaller on mobile */
-    justify-content: flex-end; /* Align hamburger to the right */
+    justify-content: space-between; /* Space between name and hamburger */
   }
 
   main {
@@ -207,7 +207,8 @@ main {
   }
 
   .site-name {
-    display: none; /* Hide site name on mobile */
+    font-size: 18px; /* Slightly smaller on mobile */
+    display: block; /* Show on mobile */
   }
 
   /* Show hamburger menu on mobile */
