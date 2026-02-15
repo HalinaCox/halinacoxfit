@@ -199,6 +199,7 @@ main {
     padding: 20px 18px;
     letter-spacing: 2px;
     height: 70px; /* Smaller on mobile */
+    justify-content: flex-end; /* Align hamburger to the right */
   }
 
   main {
@@ -206,15 +207,20 @@ main {
   }
 
   .site-name {
-    font-size: 20px;
+    display: none; /* Hide site name on mobile */
   }
 
   /* Show hamburger menu on mobile */
   .mobile-menu-toggle {
     display: flex;
   }
+  
+  /* Hide desktop navigation on mobile */
+  .nav-wrapper {
+    display: none; /* Hidden by default on mobile */
+  }
 
-  /* Mobile navigation */
+  /* Mobile navigation dropdown */
   .nav-wrapper {
     position: fixed;
     top: 70px; /* matches mobile header height */
@@ -225,6 +231,7 @@ main {
     background-color: var(--bg-dark);
     padding: 20px 0;
     display: none;
+    z-index: 999; /* Make sure it appears above other content */
   }
 
   .nav-wrapper.active {
@@ -234,12 +241,15 @@ main {
   .nav-menu {
     flex-direction: column;
     gap: 0;
-    align-items: center;
+    align-items: flex-end; /* Align items to the right */
     padding: 0;
+    padding-right: 18px; /* Add some padding from the edge */
   }
 
   .nav-menu li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: auto; /* Don't stretch full width */
+    text-align: right; /* Align text to the right */
   }
 
   .nav-menu a {
@@ -247,7 +257,7 @@ main {
     padding: 18px 24px;
     font-size: 14px;
     letter-spacing: 1.5px;
-    text-align: center;
+    text-align: right; /* Align text to the right */
   }
 
   .nav-cta {

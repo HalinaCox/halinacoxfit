@@ -1,13 +1,55 @@
 <header class="site-header">
   <a href="./index.html" class="site-name">HALINA COX</a>
-  <nav>
-    <ul class="nav-menu">
-      <li><a href="./index.html">HOME</a></li>
-      <li><a href="./about.html">ABOUT</a></li>
-      <li><a href="./services.html">SERVICES</a></li>
-      <li><a href="./portfolio.html">PORTFOLIO</a></li>
-      <li><a href="./testimonials.html">TESTIMONIALS</a></li>
-      <li><a href="./work-with-me.html" class="nav-cta">WORK WITH ME</a></li>
-    </ul>
-  </nav>
+  
+  <!-- Hamburger menu button (only shows on mobile) -->
+  <button class="mobile-menu-toggle" aria-label="Toggle menu" id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  
+  <!-- Navigation wrapper -->
+  <div class="nav-wrapper" id="navWrapper">
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="./index.html">HOME</a></li>
+        <li><a href="./about.html">ABOUT</a></li>
+        <li><a href="./services.html">SERVICES</a></li>
+        <li><a href="./portfolio.html">PORTFOLIO</a></li>
+        <li><a href="./testimonials.html">TESTIMONIALS</a></li>
+        <li><a href="./work-with-me.html" class="nav-cta">WORK WITH ME</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
+
+<script>
+(function() {
+  // Use a timeout to ensure DOM is ready
+  setTimeout(function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const navWrapper = document.getElementById('navWrapper');
+    
+    if (menuToggle) {
+      menuToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log('Menu clicked!'); // Debug log
+        this.classList.toggle('active');
+        if (navWrapper) {
+          navWrapper.classList.toggle('active');
+        }
+      });
+    }
+    
+    // Close menu when clicking a link
+    if (navWrapper) {
+      navWrapper.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+          menuToggle.classList.remove('active');
+          navWrapper.classList.remove('active');
+        }
+      });
+    }
+  }, 100);
+})();
+</script>
