@@ -10,7 +10,7 @@
 /* ===== Page Content ===== */
 .content {
   padding: 60px 20px;
-  animation: fadeIn 1.5s ease-out;
+  animation: fadeIn 2.2s ease-out;
 }
 
 @keyframes fadeIn {

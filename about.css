@@ -30,7 +30,7 @@
   flex-shrink: 0;
   
   /* Animation */
-  animation: slideUpFade 0.8s ease-out;
+  animation: slideUpFade 2.2s ease-out;
 }
 
 @keyframes slideUpFade {
@@ -53,7 +53,7 @@
   padding: 30px 20px 32px;
   
   /* Animation */
-  animation: slideDownFade 0.8s ease-out;
+  animation: slideDownFade 2.2s ease-out;
 }
 
 @keyframes slideDownFade {
