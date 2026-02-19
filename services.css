@@ -11,7 +11,7 @@
   padding: 60px 20px;
   max-width: 1200px;
   margin: 0 auto;
-  animation: fadeIn 2.2s ease-out;
+  animation: fadeIn 1.2s ease-out;
 }
 
 @keyframes fadeIn {

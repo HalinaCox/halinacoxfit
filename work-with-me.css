@@ -13,7 +13,7 @@
   backdrop-filter: blur(4px);
   
   /* Slide in from right animation - more dramatic */
-  animation: slideInRight 1.5s ease-out;
+  animation: slideInRight 1.2s ease-out;
 }
 
 @keyframes slideInRight {
