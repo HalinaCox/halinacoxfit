@@ -6,10 +6,10 @@
     <title>Services - Halina Cox</title>
     
     <!-- Global styles for header/footer -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
     
     <!-- Page-specific styles -->
-    <link rel="stylesheet" href="services.css" />
+    <link rel="stylesheet" href="/services/services.css" />
   </head>
   <body class="marble-bg">
     <!-- Include header -->
@@ -48,7 +48,7 @@
               <h3>Investment:</h3>
               <p>$800 – $2,500</p>
             </div>
-            <a href="./work-with-me.html?service=starter" class="service-cta">Start Your Project</a>
+            <a href="/work-with-me?service=starter" class="service-cta">Start Your Project</a>
           </div>
 
           <!-- Standard -->
@@ -72,7 +72,7 @@
               <h3>Investment:</h3>
               <p>$2,500 – $7,000</p>
             </div>
-            <a href="./work-with-me.html?service=standard" class="service-cta">Start Your Project</a>
+            <a href="/work-with-me?service=standard" class="service-cta">Start Your Project</a>
           </div>
 
           <!-- MVP Prototype -->
@@ -95,7 +95,7 @@
               <h3>Investment:</h3>
               <p>$5,000 – $15,000+</p>
             </div>
-            <a href="./work-with-me.html?service=mvp" class="service-cta">Let's Talk</a>
+            <a href="/work-with-me?service=mvp" class="service-cta">Let's Talk</a>
           </div>
 
           <!-- Ongoing Support -->
@@ -118,7 +118,7 @@
               <h3>Investment:</h3>
               <p>Available hourly or on a monthly retainer — let's discuss what makes sense for your needs.</p>
             </div>
-            <a href="./work-with-me.html?service=ongoing" class="service-cta">Get In Touch</a>
+            <a href="/work-with-me?service=ongoing" class="service-cta">Get In Touch</a>
           </div>
 
         </div>
@@ -127,7 +127,7 @@
         <div class="services-bottom-cta">
           <h2>Not sure which option is right for you?</h2>
           <p>Let's talk through your project. I'll help you figure out the best approach.</p>
-          <a href="./work-with-me.html?service=other" class="bottom-cta-button">Get In Touch</a>
+          <a href="/work-with-me?service=other" class="bottom-cta-button">Get In Touch</a>
         </div>
 
       </section>
@@ -136,20 +136,19 @@
     <!-- Include footer -->
     <div id="footer-placeholder"></div>
 
-    <!-- JavaScript to load header and footer -->
     <script>
-      fetch('header.html')
+      fetch('/header.html')
         .then(response => response.text())
         .then(data => {
           document.getElementById('header-placeholder').innerHTML = data;
         });
 
-      fetch('footer.html')
+      fetch('/footer.html')
         .then(response => response.text())
         .then(data => {
           document.getElementById('footer-placeholder').innerHTML = data;
         });
     </script>
-    <script src="menu.js"></script>
+    <script src="/menu.js"></script>
   </body>
 </html>

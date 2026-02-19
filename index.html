@@ -4,8 +4,8 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Halina Cox</title>
-    <link rel="stylesheet" href="styles.css"/>
-    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="/styles.css"/>
+    <link rel="stylesheet" href="/index.css"/>
   </head>
   <body>
     <div id="header-placeholder"></div>
@@ -14,7 +14,7 @@
          <div class="hero-frame">
           <img
             class="hero-img"
-            src="images/about-img.jpg"
+            src="/images/home-img.jpg"
             alt="Halina Cox headshot"
           />
         </div>
@@ -30,35 +30,22 @@
         </div>
       </section>
       <div class="bottom-cta">
-        <a href="./about.html" class="about-cta">MORE ABOUT ME</a>
+        <a href="/about" class="about-cta">MORE ABOUT ME</a>
       </div>
     </main>
     <div id="footer-placeholder"></div>
     <script>
-      fetch('header.html')
+      fetch('/header.html')
         .then(response => response.text())
         .then(data => {
           document.getElementById('header-placeholder').innerHTML = data;
         });
-      fetch('footer.html')
+      fetch('/footer.html')
         .then(response => response.text())
         .then(data => {
           document.getElementById('footer-placeholder').innerHTML = data;
         });
     </script>
-    <script>
-      fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('header-placeholder').innerHTML = data;
-        });
-        
-      fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-placeholder').innerHTML = data;
-        });
-    </script>
-    <script src="menu.js"></script>
+    <script src="/menu.js"></script>
   </body>
 </html>

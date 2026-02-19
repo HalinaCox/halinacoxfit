@@ -6,10 +6,10 @@
     <title>About - Halina Cox</title>
     
     <!-- Global styles for header/footer -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
     
     <!-- Page-specific styles -->
-    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="/about/about.css" />
   </head>
   <body>
     <!-- Include header -->
@@ -20,7 +20,7 @@
         <div class="about-inline">
           <img
             class="about-img"
-            src="images/about-img.png"
+            src="/images/about-img.png"
             alt="Halina Cox - Software Engineer"
           />
           <div class="about-text">
@@ -65,35 +65,19 @@
     <!-- Include footer -->
     <div id="footer-placeholder"></div>
 
-    <!-- JavaScript to load header and footer -->
     <script>
-      // Load header
-      fetch('header.html')
+      fetch('/header.html')
         .then(response => response.text())
         .then(data => {
           document.getElementById('header-placeholder').innerHTML = data;
         });
 
-      // Load footer
-      fetch('footer.html')
+      fetch('/footer.html')
         .then(response => response.text())
         .then(data => {
           document.getElementById('footer-placeholder').innerHTML = data;
         });
     </script>
-    <script>
-      fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('header-placeholder').innerHTML = data;
-        });
-        
-      fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-placeholder').innerHTML = data;
-        });
-    </script>
-    <script src="menu.js"></script>
+    <script src="/menu.js"></script>
   </body>
 </html>
