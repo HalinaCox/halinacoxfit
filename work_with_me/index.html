@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work With Me - Halina Cox</title>
+    <title>Work With Me - Halina Cox Fit</title>
     
     <!-- Global styles for header/footer -->
     <link rel="stylesheet" href="/styles.css" />
@@ -11,7 +11,7 @@
     <!-- Page-specific styles -->
     <link rel="stylesheet" href="/work_with_me/work_with_me.css" />
   </head>
-  <body class="marble-bg">
+  <body>
     <!-- Include header -->
     <div id="header-placeholder"></div>
 
@@ -19,58 +19,87 @@
       <section class="work-contact">
         <div class="work-contact-card">
           <h1 class="work-contact-title">Work With Me</h1>
-          <p class="work-contact-subtitle">
-            Have a project in mind? Send me a note and I'll get back to you soon.
+          <p class="work-contact-subtitle" style="font-style: italic; font-family: 'Times New Roman', Times, serif;">
+            Let's get started on your health journey!
+          </p>
+          <p style="line-height: 1.3;">
+            Please fill out the form below to apply for 1:1 coaching.<br>
+            I can't wait to learn more about you!
           </p>
 
           <form
             class="contact-form"
-            action="https://formspree.io/f/xeezbdkl"
+            action="https://formspree.io/f/xzdyrydq"
             method="POST"
           >
             <div class="field-row">
               <div class="field">
-                <label for="name">Name</label>
-                <input 
-                  id="name" 
-                  name="name" 
-                  type="text" 
-                  placeholder="Your name" 
-                  required 
+                <label for="first_name">First Name</label>
+                <input
+                  id="first_name"
+                  name="first_name"
+                  type="text"
+                  required
                 />
               </div>
+              <div class="field">
+                <label for="last_name">Last Name</label>
+                <input
+                  id="last_name"
+                  name="last_name"
+                  type="text"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field-row">
               <div class="field">
                 <label for="email">Email</label>
                 <input 
                   id="email" 
                   name="email" 
                   type="email" 
-                  placeholder="you@example.com" 
                   required 
                 />
               </div>
             </div>
 
             <div class="field">
-              <label for="project">Project Type</label>
-              <select id="project" name="project_type" required>
-                <option value="">Select one</option>
-                <option value="starter">Starter</option>
-                <option value="standard">Standard</option>
-                <option value="mvp">MVP Prototype</option>
-                <option value="ongoing">Ongoing Support</option>
-                <option value="other">Other</option>
-              </select>
+              <label for="phone">Phone Number</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+              />
             </div>
 
             <div class="field">
-              <label for="message">Project Details</label>
-              <textarea 
-                id="message" 
-                name="message" 
-                rows="6" 
-                placeholder="Tell me about your project..." 
+              <label for="goals">What are your main health and wellness goals?</label>
+              <textarea
+                id="goals"
+                name="goals"
+                rows="4"
                 required
+              ></textarea>
+            </div>
+
+            <div class="field">
+              <label for="why">Why are you interested in working with me?</label>
+              <textarea
+                id="why"
+                name="why"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+
+            <div class="field">
+              <label for="other">Anything else you'd like me to know?</label>
+              <textarea
+                id="other"
+                name="other"
+                rows="4"
               ></textarea>
             </div>
 

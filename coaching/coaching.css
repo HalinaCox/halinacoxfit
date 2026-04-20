@@ -1,0 +1,515 @@
+/* ===== COACHING PAGE - coaching.css ===== */
+
+:root {
+  --dark: #0a0600;
+  --cream: #f5f0e8;
+  --white: #ffffff;
+  --accent: #b8956a;
+  --card-bg: #ede8de;
+  --muted: #6b6560;
+}
+
+main {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ===== HERO ===== */
+.svc-hero {
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: stretch;
+  background-color: #f2f0ed;
+}
+
+.svc-hero-text {
+  padding: clamp(32px, 4vw, 48px) clamp(32px, 6vw, 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.svc-eyebrow {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  color: var(--dark);
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.svc-hero-text h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: var(--dark);
+}
+
+.svc-hero-text h1 em {
+  font-style: italic;
+}
+
+.svc-hero-desc {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--dark);
+  margin: 0;
+  max-width: 480px;
+}
+
+.svc-hero-desc em {
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.svc-hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.svc-hero-badges li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+  color: var(--dark);
+}
+
+.svc-hero-img {
+  overflow: hidden;
+}
+
+.svc-hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+
+/* ===== WHY SECTION ===== */
+.svc-why {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  align-items: center;
+  background-color: var(--cream);
+  padding: clamp(60px, 8vw, 100px) clamp(32px, 6vw, 80px);
+  gap: clamp(16px, 2vw, 32px);
+}
+
+.svc-why-img img {
+  width: 100%;
+  max-width: 300px;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+
+.svc-why-text h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+  color: var(--dark);
+}
+
+.svc-accent-line {
+  width: 40px;
+  height: 2px;
+  background-color: var(--accent);
+  margin: 0 0 24px;
+}
+
+.svc-why-text p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--dark);
+  margin: 0 0 14px;
+}
+
+.svc-why-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== COACHING EXPERIENCE ===== */
+.svc-coaching {
+  background: var(--white);
+  padding: clamp(60px, 8vw, 100px) clamp(24px, 5vw, 80px);
+  text-align: center;
+}
+
+.svc-coaching h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+  color: var(--dark);
+}
+
+.svc-coaching-sub {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--dark);
+  margin: 0 auto 52px;
+}
+
+.svc-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.svc-details-col {
+  padding: 0 52px 0 0;
+}
+
+.svc-details-col + .svc-details-col {
+  padding: 0 0 0 52px;
+  border-left: 1px solid rgba(10, 6, 0, 0.12);
+}
+
+.svc-col-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.svc-col-icon {
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(10, 6, 0, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.svc-col-header h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: var(--dark);
+}
+
+.svc-details-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.svc-details-col li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--dark);
+}
+
+.svc-check {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ===== INVESTMENT ===== */
+.svc-investment {
+  background: var(--white);
+  padding: 0 clamp(24px, 5vw, 80px) clamp(60px, 8vw, 100px);
+  text-align: center;
+}
+
+.svc-investment-card {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  background-color: var(--card-bg);
+  padding: 44px 60px;
+  max-width: 760px;
+  margin: 0 auto 44px;
+}
+
+.svc-investment-left,
+.svc-investment-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+}
+
+.svc-investment-icon {
+  width: 54px;
+  height: 54px;
+  border: 1px solid rgba(10, 6, 0, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.svc-invest-label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  color: var(--dark);
+  margin: 0 0 4px;
+  letter-spacing: 0.04em;
+}
+
+.svc-invest-price {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--dark);
+  margin: 0;
+  line-height: 1;
+}
+
+.svc-invest-note {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.82rem;
+  color: var(--dark);
+  margin: 4px 0 0;
+}
+
+.svc-investment-divider {
+  width: 1px;
+  height: 90px;
+  background-color: rgba(10, 6, 0, 0.15);
+  margin: 0 40px;
+}
+
+.svc-investment-right p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--dark);
+  margin: 0;
+}
+
+/* ===== BUTTONS ===== */
+.svc-btn-dark {
+  display: inline-block;
+  padding: 16px 40px;
+  background-color: var(--dark);
+  color: white;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  transition: opacity 0.2s ease;
+  text-transform: uppercase;
+}
+
+.svc-btn-dark:hover {
+  opacity: 0.82;
+}
+
+/* ===== BOTTOM CTA ===== */
+.svc-bottom-cta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.svc-bottom-text {
+  background-color: var(--cream);
+  padding: clamp(24px, 3vw, 36px) clamp(32px, 6vw, 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.svc-bottom-text h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: var(--dark);
+}
+
+.svc-bottom-text p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--dark);
+  margin: 0;
+  max-width: 380px;
+}
+
+.svc-bottom-text p em {
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.svc-bottom-img {
+  overflow: hidden;
+  position: relative;
+}
+
+.svc-bottom-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== FEATURE ROW ===== */
+.svc-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: clamp(40px, 6vw, 64px) clamp(24px, 5vw, 80px);
+  background-color: var(--white);
+}
+
+.svc-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 0 32px;
+  border-right: 1px solid rgba(10, 6, 0, 0.12);
+}
+
+.svc-feature:first-child { padding-left: 0; }
+.svc-feature:last-child { padding-right: 0; border-right: none; }
+
+.svc-feature-icon {
+  margin-bottom: 4px;
+}
+
+.svc-feature h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  margin: 0;
+  color: var(--dark);
+}
+
+.svc-feature p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .svc-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .svc-hero-img {
+    display: none;
+  }
+
+  .svc-why {
+    grid-template-columns: 1fr;
+    padding: 60px 24px;
+  }
+
+  .svc-why-img {
+    display: none;
+  }
+
+  .svc-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .svc-details-col {
+    padding: 0;
+  }
+
+  .svc-details-col + .svc-details-col {
+    padding: 40px 0 0;
+    border-left: none;
+    border-top: 1px solid rgba(10, 6, 0, 0.12);
+  }
+
+  .svc-investment-card {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 32px 24px;
+  }
+
+  .svc-investment-divider {
+    width: 100%;
+    height: 1px;
+    margin: 0;
+  }
+
+  .svc-bottom-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .svc-bottom-img {
+    display: none;
+  }
+
+  .svc-features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+@media (max-width: 580px) {
+  .svc-hero-text {
+    gap: 18px;
+  }
+
+  .svc-hero-badges {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .svc-investment-left,
+  .svc-investment-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .svc-features {
+    gap: 20px;
+  }
+}

@@ -2,6 +2,8 @@
 
 .work-contact {
   padding: 72px 20px;
+  background-color: #f7f5f1;
+  min-height: 100vh;
 }
 
 .work-contact-card {
@@ -32,16 +34,34 @@
 .work-contact-title {
   margin: 0;
   font-size: clamp(1.8rem, 3vw, 2.4rem);
-  letter-spacing: 1px;
+  letter-spacing: -0.04em;
+  font-weight: lighter;
+  font-family: "Times New Roman", Times, serif;
   color: #0a0600;
-  padding-left: 10px;
+  text-align: center;
 }
 
-.work-contact-subtitle {
-  margin: 10px 0 28px;
-  color: #3a342d;
-  line-height: 1.5;
-  padding-left: 10px;
+.work-contact-card > p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #0a0600;
+  margin: 0 0 4px;
+}
+
+.work-contact-card > p:last-of-type {
+  margin-bottom: 28px;
+}
+
+.work-contact-card > p.work-contact-subtitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #0a0600;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0 0 32px;
 }
 
 .contact-form {
@@ -93,7 +113,6 @@
 .contact-submit {
   justify-self: start;
   border: 2px solid #0a0600;
-  border-radius: 999px;
   background: #fff;
   color: #0a0600;
   padding: 12px 24px;
