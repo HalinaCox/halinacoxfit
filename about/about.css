@@ -118,7 +118,7 @@
   .about-inline {
     flex-direction: column;
     text-align: center;
-    gap: 48px;
+    gap: 24px;
   }
 
   .about-img {

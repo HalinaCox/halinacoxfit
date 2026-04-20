@@ -492,6 +492,7 @@ main {
   .hero-frame {
     width: min(760px, 90vw);
     height: clamp(320px, 50vh, 620px);
+    margin: 0 auto;
   }
 }
 
@@ -612,11 +613,7 @@ main {
     justify-items: center;
   }
 
-  .story-media {
-    grid-template-columns: 1fr;
-  }
-
-  .intro-banner h2 {
+.intro-banner h2 {
     font-size: clamp(1.6rem, 6vw, 2rem);
   }
 
