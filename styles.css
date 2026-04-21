@@ -62,9 +62,25 @@ main {
 .site-name {
   text-decoration: none;
   color: var(--text-light);
-  font-size: 25px;
   cursor: pointer;
   z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.site-name-main {
+  font-size: 22px;
+  letter-spacing: 0.05em;
+}
+
+.site-name-sub {
+  font-size: 10px;
+  opacity: 0.75;
+  display: block;
+  width: 100%;
+  text-align: justify;
+  text-align-last: justify;
 }
 
 .site-name:hover {
@@ -206,8 +222,16 @@ main {
   }
 
   .site-name {
-    font-size: 18px; /* Slightly smaller on mobile */
-    display: block; /* Show on mobile */
+    display: flex;
+  }
+
+  .site-name-main {
+    font-size: 17px;
+  }
+
+  .site-name-sub {
+    font-size: 9px;
+    text-align-last: justify;
   }
 
   /* Show hamburger menu on mobile */
