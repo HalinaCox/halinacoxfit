@@ -1,36 +1,29 @@
-// Mobile Menu Toggle Functionality
-// This script handles the hamburger menu for all pages
+// Event delegation — works regardless of when the header is injected into the DOM
 
-function initMobileMenu() {
-  const menuToggle = document.querySelector('.mobile-menu-toggle');
-  const navWrapper = document.querySelector('.nav-wrapper');
-  
-  if (menuToggle && navWrapper) {
-    // Toggle menu when clicking hamburger
-    menuToggle.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.classList.toggle('active');
-      navWrapper.classList.toggle('active');
-    });
-    
-    // Close menu when clicking a link
-    navWrapper.addEventListener('click', function(e) {
-      if (e.target.tagName === 'A') {
-        menuToggle.classList.remove('active');
-        navWrapper.classList.remove('active');
-      }
-    });
-    
-    // Reset menu when screen size changes
-    window.addEventListener('resize', function() {
-      menuToggle.classList.remove('active');
-      navWrapper.classList.remove('active');
-    });
+document.addEventListener('click', function(e) {
+  // Toggle hamburger
+  const toggle = e.target.closest('.mobile-menu-toggle');
+  if (toggle) {
+    e.preventDefault();
+    const nav = document.querySelector('.nav-wrapper');
+    toggle.classList.toggle('active');
+    if (nav) nav.classList.toggle('active');
+    return;
   }
-}
 
-// Initialize menu after header is loaded
-document.addEventListener('DOMContentLoaded', function() {
-  // Wait a bit for header to load via fetch
-  setTimeout(initMobileMenu, 200);
+  // Close menu when a nav link is clicked
+  if (e.target.closest('.nav-wrapper a')) {
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const nav = document.querySelector('.nav-wrapper');
+    if (toggle) toggle.classList.remove('active');
+    if (nav) nav.classList.remove('active');
+  }
+});
+
+// Close menu on resize back to desktop
+window.addEventListener('resize', function() {
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const nav = document.querySelector('.nav-wrapper');
+  if (toggle) toggle.classList.remove('active');
+  if (nav) nav.classList.remove('active');
 });
